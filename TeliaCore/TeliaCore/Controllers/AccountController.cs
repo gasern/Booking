@@ -11,6 +11,12 @@ namespace TeliaCore.Controllers
 {
     public class AccountController : Controller
     {
+        public Model1Container _db { get; set; }
+  
+        public AccountController()
+        {
+            _db = new Model1Container();
+        }
 
         //
         // GET: /Account/LogOn
@@ -26,27 +32,27 @@ namespace TeliaCore.Controllers
         [HttpPost]
         public ActionResult LogOn(LogOnModel model, string returnUrl)
         {
-            return RedirectToAction("Index", "Home");
-            if (ModelState.IsValid)
+            var user = _db.Contacts.Where(pass => pass.Password == model.Password).FirstOrDefault();
+
+            if (user != null)
             {
-                if (Membership.ValidateUser(model.UserName, model.Password))
+                //modelstate skal sættes til true
+                FormsAuthentication.SetAuthCookie(user.FirstName, model.RememberMe);
+                if (Url.IsLocalUrl(returnUrl) && returnUrl.Length > 1 && returnUrl.StartsWith("/")
+                    && !returnUrl.StartsWith("//") && !returnUrl.StartsWith("/\\"))
                 {
-                    FormsAuthentication.SetAuthCookie(model.UserName, model.RememberMe);
-                    if (Url.IsLocalUrl(returnUrl) && returnUrl.Length > 1 && returnUrl.StartsWith("/")
-                        && !returnUrl.StartsWith("//") && !returnUrl.StartsWith("/\\"))
-                    {
-                        return Redirect(returnUrl);
-                    }
-                    else
-                    {
-                        return RedirectToAction("Index", "Home");
-                    }
+                    return Redirect(returnUrl);
                 }
                 else
                 {
-                    ModelState.AddModelError("", "The user name or password provided is incorrect.");
+                    return RedirectToAction("Index", "Home");
                 }
             }
+            else
+            {
+                ModelState.AddModelError("", "The user name or password provided is incorrect.");
+            }
+            
 
             // If we got this far, something failed, redisplay form
             return View(model);
