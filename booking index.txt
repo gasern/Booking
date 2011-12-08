@@ -1,0 +1,107 @@
+     <fieldset id="bookingInfo">
+            <legend>Book dit næste møde</legend>
+                <div class="rdContent" id="ctl00_CenterStage_orderManager_RadDock29_1004_C">
+				    <div style="margin-bottom: 1.5em">
+                        <div style="position: relative; overflow: hidden; white-space: nowrap; height: 32px;" id="div_FlowTopNavigation">
+        
+                            <div style="position: absolute; z-index: 4; top: 0px; left: 0px" class="navigationnode current first" id="ctl00_CenterStage_orderManager_RadDock29_1004_C_ControlModule29_1004_FlowRepeater_ctl00_div_Title">
+                                <span class="navigationtext current first" id="ctl00_CenterStage_orderManager_RadDock29_1004_C_ControlModule29_1004_FlowRepeater_ctl00_lbl_Text">1. Find dato</span>
+                    
+                            </div>
+            
+                            <div style="position: absolute; z-index: 3; top: 0px; left: 220px" class="navigationnode unvisited" id="ctl00_CenterStage_orderManager_RadDock29_1004_C_ControlModule29_1004_FlowRepeater_ctl01_div_Title">
+                                <span class="navigationtext unvisited" id="ctl00_CenterStage_orderManager_RadDock29_1004_C_ControlModule29_1004_FlowRepeater_ctl01_lbl_Text">2. Kontakter</span>
+                    
+                            </div>
+            
+                            <div style="position: absolute; z-index: 2; top: 0px; left: 440px" class="navigationnode unvisited" id="ctl00_CenterStage_orderManager_RadDock29_1004_C_ControlModule29_1004_FlowRepeater_ctl02_div_Title">
+                                <span class="navigationtext unvisited" id="ctl00_CenterStage_orderManager_RadDock29_1004_C_ControlModule29_1004_FlowRepeater_ctl02_lbl_Text">3. Lokale</span>
+                    
+                            </div>
+            
+                            <div style="position: absolute; z-index: 1; top: 0px; left: 660px" class="navigationnode unvisited last" id="ctl00_CenterStage_orderManager_RadDock29_1004_C_ControlModule29_1004_FlowRepeater_ctl03_div_Title">
+                                <span class="navigationtext unvisited" id="ctl00_CenterStage_orderManager_RadDock29_1004_C_ControlModule29_1004_FlowRepeater_ctl03_lbl_Text">4. Forplejning</span>
+                    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div id="datepicker_container">
+                   <input type="hidden" maxlength="10" value="@DateTime.Today.ToShortDateString()" name="datepicker_container_input" id="datepicker_container_input" class="w8em format-d-m-y divider-dash highlight-days-12 no-fade" />
+                </div>
+    
+                <div id="bookingTime" style="float: left; width: 230px; margin-left: 15px">
+            <div id="datecontainer" style="float: left; margin-bottom: 10px;">
+                <p class="lastup" style="float: left">
+                    @Html.LabelFor(model => model.DateStart) @*<label for="datecontainer-1">Ønskede dato</label>*@
+                </p>
+                 <input type="text" maxlength="10" value="@DateTime.Today.ToShortDateString()" id="datecontainer-1" style="float: left"/>
+              
+             </div>
+              
+              <div id="datecontainer" style="float: left; margin-bottom: 10px;">
+                <p class="lastup" style="float: left">
+                    <label for="datecontainer-1">Ønskede slut dato</label>
+                </p>
+                 <input type="text" maxlength="10" value="@DateTime.Today.ToShortDateString()" id="datecontainer-1" style="float: left"/>
+              
+             </div>
+    
+
+            <div id="time_from" style="float: left; margin-bottom: 10px">
+               <p class="lastup" style="float: left">
+                    <label for="time2">Til tidspunkt</label>
+                </p>
+                <input type="text" value="@DateTime.Now.ToString("HH:00")" size="96" id="time2" autocomplete="OFF"  style="float: left"/>
+            </div>
+        
+            <div id="time_to" style="float: left; margin-bottom: 10px">
+               <p class="lastup" style="float: left">
+                    <label for="time_to">Til tidspunkt</label>
+                </p>
+                <input type="text" value="@DateTime.Now.AddHours(1).ToString("HH:00")" size="96" id="time_to" autocomplete="OFF"  style="float: left"/>
+            </div>
+
+            <div id="reminder" style="float: left; margin-bottom: 10px"">
+               <p class="lastup" style="float: left">
+                    <label for="reminder">Mind mig om mødet</label>
+                </p>
+                <select style="display: block">
+                    <option value="5">5 min før</option >
+                    <option value="15">15 min før</option>
+                    <option value="30">30 min før</option>
+                    <option value="60">1 time før</option>
+                    <option value="120">2 timer før</option>
+                    <option value="300">5 timer før</option>
+                    <option value="600">10 timer før</option>
+                    <option value="1200">20 timer før</option>
+                </select>
+         
+            </div>
+
+
+        </div>
+
+                <div style="width: 49%; text-align: right; float: right;">
+                    <input type="submit" class="orderFlowControl next" id="ctl00_CenterStage_orderManager_RadDock6_999_C_ControlModule6_999_btn_FlowNext" value="" name="ctl00$CenterStage$orderManager$RadDock6_999$C$ControlModule6_999$btn_FlowNext"/>
+                </div>
+
+           <script type="text/javascript">
+               $("#time2").timePicker({
+                   startTime: "00:00", // Using string. Can take string or Date object.
+                   endTime: new Date(0, 0, 0, 23, 45, 0), // Using Date object here.
+                   show24Hours: true,
+                   separator: ':',
+                   step: 15
+               });
+               $("#time_to").timePicker({
+                   startTime: "00:00", // Using string. Can take string or Date object.
+                   endTime: new Date(0, 0, 0, 23, 45, 0), // Using Date object here.
+                   show24Hours: true,
+                   separator: ':',
+                   step: 15
+               });
+        </script>
+  
+    </fieldset>

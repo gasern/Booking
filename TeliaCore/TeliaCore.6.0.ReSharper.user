@@ -1,0 +1,660 @@
+<Configuration>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Admin/d:Room/f:Delete.cshtml" caret="0" fromTop="0" />
+      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Admin/d:Room/f:List.cshtml" caret="0" fromTop="0" />
+      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Admin/d:Contact/f:Delete.cshtml" caret="0" fromTop="0" />
+      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Admin/d:Contact/f:Edit.cshtml" caret="0" fromTop="0" />
+      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Admin/d:Contact/f:Index.cshtml" caret="0" fromTop="0" />
+      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Admin/d:Contact/f:Create.cshtml" caret="0" fromTop="0" />
+      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Admin/d:Contact/f:List.cshtml" caret="0" fromTop="0" />
+      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Booking/f:Index_.cshtml" caret="0" fromTop="0" />
+      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Booking/f:Index.cshtml" caret="0" fromTop="0" />
+      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Booking/f:Create_.cshtml" caret="0" fromTop="0" />
+      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Shared/f:_TopNavigation.cshtml" caret="0" fromTop="0" />
+      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Meal/f:Index.cshtml" caret="0" fromTop="0" />
+      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Meal/f:Details.cshtml" caret="0" fromTop="0" />
+      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Meal/f:Edit.cshtml" caret="0" fromTop="0" />
+      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Meal/f:Delete.cshtml" caret="0" fromTop="0" />
+      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Booking/f:Confirm.cshtml" caret="0" fromTop="0" />
+      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Booking/f:AddMeal.cshtml" caret="0" fromTop="0" />
+      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Booking/f:AddRoom.cshtml" caret="0" fromTop="0" />
+      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Booking/f:AddContacts.cshtml" caret="0" fromTop="0" />
+      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Booking/f:Delete.cshtml" caret="0" fromTop="0" />
+      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Controllers/f:AccountController.cs" caret="0" fromTop="0" />
+      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Booking/f:Edit.cshtml" caret="0" fromTop="0" />
+      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Booking/f:Details.cshtml" caret="0" fromTop="0" />
+      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Controllers/f:BookingController.cs" caret="2113" fromTop="29" />
+      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Controllers/f:HomeController.cs" caret="489" fromTop="20" />
+      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Home/f:Index.cshtml" caret="193" fromTop="8" />
+      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Shared/f:_ViewStart.cshtml" caret="0" fromTop="0" />
+      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Shared/f:_Layout.cshtml" caret="1202" fromTop="35" />
+      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Content/f:Site.css" caret="7671" fromTop="28" />
+      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Booking/f:Create.cshtml" caret="4322" fromTop="14" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Shared/f:_Layout.cshtml" caret="1202" fromTop="35" />
+      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Booking/f:Create.cshtml" caret="474" fromTop="23" />
+      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Booking/f:Create.cshtml" caret="5174" fromTop="22" />
+      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Booking/f:Create.cshtml" caret="7133" fromTop="18" />
+      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Booking/f:Create.cshtml" caret="7823" fromTop="20" />
+      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Booking/f:Create.cshtml" caret="8463" fromTop="22" />
+      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Booking/f:Create.cshtml" caret="10186" fromTop="24" />
+      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Booking/f:Create.cshtml" caret="442" fromTop="16" />
+      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Booking/f:Create.cshtml" caret="442" fromTop="16" />
+      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Booking/f:Create.cshtml" caret="13576" fromTop="33" />
+      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Booking/f:Create.cshtml" caret="13576" fromTop="37" />
+      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Booking/f:Create.cshtml" caret="13576" fromTop="8" />
+      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Booking/f:Create.cshtml" caret="13576" fromTop="15" />
+      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Booking/f:Create.cshtml" caret="13576" fromTop="23" />
+      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Booking/f:Create.cshtml" caret="12083" fromTop="17" />
+      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Booking/f:Create.cshtml" caret="12083" fromTop="25" />
+      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Booking/f:Create.cshtml" caret="12086" fromTop="41" />
+      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Booking/f:Create.cshtml" caret="10908" fromTop="31" />
+      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Booking/f:Create.cshtml" caret="11149" fromTop="29" />
+      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Booking/f:Create.cshtml" caret="11426" fromTop="35" />
+      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Booking/f:Create.cshtml" caret="11718" fromTop="41" />
+      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Booking/f:Create.cshtml" caret="10600" fromTop="16" />
+      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Booking/f:Create.cshtml" caret="13567" fromTop="50" />
+      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Booking/f:Create.cshtml" caret="12104" fromTop="18" />
+      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Booking/f:Create.cshtml" caret="4870" fromTop="36" />
+      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Content/f:Site.css" caret="7671" fromTop="28" />
+      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Booking/f:Create.cshtml" caret="3100" fromTop="16" />
+      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Booking/f:Create.cshtml" caret="3511" fromTop="21" />
+      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Booking/f:Create.cshtml" caret="3920" fromTop="26" />
+      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Booking/f:Create.cshtml" caret="4322" fromTop="31" />
+    </RecentEdits>
+  </RecentFiles>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="CSharpCodeCompletionContext">
+      <Item value="Routing" priority="22" />
+      <Item value="Html" priority="178" />
+      <Item value="prop" priority="1695" />
+      <Item value="int" priority="936" />
+      <Item value="DateTime`0" priority="791" />
+      <Item value="string" priority="370" />
+      <Item value="List" priority="568" />
+      <Item value="bool" priority="278" />
+      <Item value="Booking`0" priority="491" />
+      <Item value="Decimal`0" priority="30" />
+      <Item value="public" priority="410" />
+      <Item value="ActionResult`0" priority="191" />
+      <Item value="return" priority="639" />
+      <Item value="View`0" priority="255" />
+      <Item value="new" priority="1156" />
+      <Item value="var" priority="668" />
+      <Item value="BookingController" priority="28" />
+      <Item value="Id" priority="91" />
+      <Item value="MoedeLokaleId" priority="27" />
+      <Item value="ForplejningsBestilling`0" priority="31" />
+      <Item value="Kontakt`0" priority="31" />
+      <Item value="MoedeEmne" priority="27" />
+      <Item value="MoedeDagsorden" priority="27" />
+      <Item value="MødeTidspunktSlut" priority="27" />
+      <Item value="DateTime" priority="57" />
+      <Item value="MødeTidspunktStart" priority="55" />
+      <Item value="MoedeIndkalder" priority="27" />
+      <Item value="Kontakt" priority="115" />
+      <Item value="AendretTidspunkt" priority="55" />
+      <Item value="Afdeling" priority="27" />
+      <Item value="AfdelingId" priority="83" />
+      <Item value="EmailAdresse" priority="32" />
+      <Item value="ErOnline" priority="55" />
+      <Item value="Fornavn" priority="32" />
+      <Item value="Initialer" priority="32" />
+      <Item value="OnlineFraTidspunkt" priority="27" />
+      <Item value="OprettetTidspunkt" priority="27" />
+      <Item value="Forplejning" priority="27" />
+      <Item value="ForplejningsBestilling" priority="28" />
+      <Item value="List&lt;Kontakt&gt;" priority="28" />
+      <Item value="NewsStyleUriParser`0" priority="53" />
+      <Item value="Booking" priority="277" />
+      <Item value="bookinger" priority="63" />
+      <Item value="Model" priority="490" />
+      <Item value="TeliaCore" priority="155" />
+      <Item value="Models" priority="80" />
+      <Item value="foreach" priority="157" />
+      <Item value="in" priority="31" />
+      <Item value="List&lt;Booking&gt;" priority="28" />
+      <Item value="booking" priority="1313" />
+      <Item value="model" priority="89" />
+      <Item value="IList" priority="31" />
+      <Item value="HomeController`0" priority="31" />
+      <Item value="Stub`0" priority="30" />
+      <Item value="Stub" priority="92" />
+      <Item value="." priority="26" />
+      <Item value="eye.js" priority="22" />
+      <Item value="utils.js" priority="22" />
+      <Item value="layout.js" priority="22" />
+      <Item value="TagBuilder" priority="29" />
+      <Item value="tagSpan" priority="31" />
+      <Item value="RenderSection`0" priority="29" />
+      <Item value="section" priority="149" />
+      <Item value="Url" priority="89" />
+      <Item value="CssStyleCollection`0" priority="29" />
+      <Item value="IStyleSheet`0" priority="26" />
+      <Item value="MyEventsDataContext`0" priority="22" />
+      <Item value="myevent" priority="29" />
+      <Item value="data" priority="31" />
+      <Item value="Index2" priority="32" />
+      <Item value="format" priority="30" />
+      <Item value="DbSet" priority="155" />
+      <Item value="MealOrder`0" priority="62" />
+      <Item value="Room`0" priority="62" />
+      <Item value="IBookingService`0" priority="31" />
+      <Item value="DatabaseInit`0" priority="62" />
+      <Item value="DatabaseInit" priority="28" />
+      <Item value="dbOpen" priority="31" />
+      <Item value="BookingService`0" priority="95" />
+      <Item value="db_Stub" priority="256" />
+      <Item value="DatabaseStub" priority="28" />
+      <Item value="readonly" priority="31" />
+      <Item value="from" priority="95" />
+      <Item value="where" priority="31" />
+      <Item value="b" priority="63" />
+      <Item value="select" priority="63" />
+      <Item value="MealOrder" priority="155" />
+      <Item value="RoomID" priority="93" />
+      <Item value="Subject" priority="93" />
+      <Item value="Description" priority="149" />
+      <Item value="DateStart" priority="92" />
+      <Item value="DateEnd" priority="93" />
+      <Item value="Host" priority="93" />
+      <Item value="Department" priority="93" />
+      <Item value="DepartmentId" priority="65" />
+      <Item value="LastName" priority="98" />
+      <Item value="Email" priority="93" />
+      <Item value="IsOnline" priority="93" />
+      <Item value="FirstName" priority="92" />
+      <Item value="OnlineFrom" priority="65" />
+      <Item value="Invited" priority="93" />
+      <Item value="Contact" priority="329" />
+      <Item value="Console`0" priority="31" />
+      <Item value="Contact`0" priority="184" />
+      <Item value="TimeStart" priority="27" />
+      <Item value="TimeEnd" priority="27" />
+      <Item value="_booking" priority="31" />
+      <Item value="try" priority="63" />
+      <Item value="true" priority="227" />
+      <Item value="false" priority="194" />
+      <Item value="BookingController`0" priority="63" />
+      <Item value="_bookingService" priority="90" />
+      <Item value="RedirectToAction`0" priority="213" />
+      <Item value="RedirectToRoute`0" priority="26" />
+      <Item value="Redirect`0" priority="26" />
+      <Item value="Index" priority="98" />
+      <Item value="bookingService" priority="31" />
+      <Item value="windsorContainer" priority="53" />
+      <Item value="requestContext" priority="26" />
+      <Item value="controllerType" priority="31" />
+      <Item value="ContactService`0" priority="31" />
+      <Item value="IAdminService`0" priority="31" />
+      <Item value="AdminService`0" priority="31" />
+      <Item value="AdminController`0" priority="31" />
+      <Item value="adminService" priority="27" />
+      <Item value="ContactController`0" priority="31" />
+      <Item value="contactService" priority="27" />
+      <Item value="struct" priority="26" />
+      <Item value="ModelContainer" priority="28" />
+      <Item value="db" priority="447" />
+      <Item value="using" priority="30" />
+      <Item value="TeliaCoreContainer" priority="28" />
+      <Item value="Model1Container`0" priority="62" />
+      <Item value="Model1Container" priority="58" />
+      <Item value="DBNull`0" priority="31" />
+      <Item value="Modified" priority="16" />
+      <Item value="ModelState" priority="26" />
+      <Item value="Title" priority="60" />
+      <Item value="StartDate" priority="87" />
+      <Item value="EndDate" priority="93" />
+      <Item value="LastOnline" priority="149" />
+      <Item value="AddBooking" priority="27" />
+      <Item value="PartialView`0" priority="26" />
+      <Item value="AddContacts" priority="55" />
+      <Item value="Create" priority="60" />
+      <Item value="AddRoom" priority="65" />
+      <Item value="AddMeal" priority="60" />
+      <Item value="partial" priority="31" />
+      <Item value="Action`0" priority="31" />
+      <Item value="Session" priority="63" />
+      <Item value="HttpContext" priority="31" />
+      <Item value="as" priority="31" />
+      <Item value="contact" priority="440" />
+      <Item value="contactId" priority="31" />
+      <Item value="if" priority="158" />
+      <Item value="Content`0" priority="31" />
+      <Item value="List&lt;Contact&gt;" priority="28" />
+      <Item value="contacts" priority="95" />
+      <Item value="div" priority="29" />
+      <Item value="HentOgTilføjLokaleTilBooking`0" priority="31" />
+      <Item value="JsonResult" priority="86" />
+      <Item value="private" priority="31" />
+      <Item value="JsonResult`0" priority="58" />
+      <Item value="object" priority="31" />
+      <Item value="message" priority="31" />
+      <Item value="JsonFejlmeddelelse`0" priority="95" />
+      <Item value="AddRoomToBooking`0" priority="31" />
+      <Item value="AddMealToBooking`0" priority="31" />
+      <Item value="meal" priority="95" />
+      <Item value="else" priority="95" />
+      <Item value="room" priority="63" />
+      <Item value="menu" priority="31" />
+      <Item value="menuList" priority="26" />
+      <Item value="virtual" priority="30" />
+      <Item value="EventArgs`0" priority="37" />
+      <Item value="TextAreaExtensions`0" priority="71" />
+      <Item value="IDReferencePropertyAttribute`0" priority="37" />
+      <Item value="Text" priority="37" />
+      <Item value="AddToList`0" priority="29" />
+      <Item value="static" priority="31" />
+      <Item value="contactIds" priority="63" />
+      <Item value="id" priority="125" />
+      <Item value="HtmlHelper`0" priority="26" />
+      <Item value="htmlHelper" priority="64" />
+      <Item value="_db" priority="756" />
+      <Item value="excistingContact" priority="30" />
+      <Item value="ContactList" priority="244" />
+      <Item value="ContactDelete" priority="55" />
+      <Item value="Deleted" priority="16" />
+      <Item value="#endif" priority="31" />
+      <Item value="Contact/List" priority="59" />
+      <Item value="Contact/Edit" priority="27" />
+      <Item value="Contact/Delete" priority="59" />
+      <Item value="Admin" priority="152" />
+      <Item value="contactDetails" priority="30" />
+      <Item value="RefreshmentItem`0" priority="241" />
+      <Item value="refreshment" priority="64" />
+      <Item value="Meal/RefreshmentItemCreate" priority="32" />
+      <Item value="Meal/RefreshmentItemList" priority="32" />
+      <Item value="#endregion" priority="31" />
+      <Item value="RefreshmentItem/Create" priority="32" />
+      <Item value="RefreshmentItem/List" priority="32" />
+      <Item value="RefreshmentItem/Delete" priority="27" />
+      <Item value="RefreshmentItem/Edit" priority="27" />
+      <Item value="RefreshmentItemSave" priority="27" />
+      <Item value="RefreshmentItemList" priority="88" />
+      <Item value="ContactCreate" priority="27" />
+      <Item value="ContactEdit" priority="27" />
+      <Item value="ContactDetails" priority="27" />
+      <Item value="Contact/Create" priority="32" />
+      <Item value="ContactSave" priority="27" />
+      <Item value="contactToDelete" priority="31" />
+      <Item value="Room/Create" priority="27" />
+      <Item value="Room/List" priority="27" />
+      <Item value="RoomList" priority="60" />
+      <Item value="refreshmentItem" priority="31" />
+      <Item value="d" priority="31" />
+      <Item value="RefreshmentItemCreate" priority="27" />
+      <Item value="RefreshmentItemEdit" priority="27" />
+      <Item value="Product`0" priority="91" />
+      <Item value="ProductEdit" priority="55" />
+      <Item value="RoomCreate" priority="27" />
+      <Item value="ProductCreate" priority="60" />
+      <Item value="ProductDetails" priority="27" />
+      <Item value="ProductDelete" priority="27" />
+      <Item value="ProductSave" priority="27" />
+      <Item value="ProductList" priority="27" />
+      <Item value="product" priority="148" />
+      <Item value="RoomSave" priority="27" />
+      <Item value="Name" priority="53" />
+      <Item value="Price" priority="27" />
+      <Item value="Size" priority="27" />
+      <Item value="List&lt;Product&gt;" priority="28" />
+      <Item value="Product" priority="28" />
+      <Item value="Initials" priority="27" />
+      <Item value="PhoneNumber" priority="27" />
+      <Item value="MobileNumber" priority="27" />
+      <Item value="CreateDate" priority="27" />
+      <Item value="Password" priority="27" />
+      <Item value="UserName" priority="32" />
+      <Item value="RememberMe" priority="27" />
+      <Item value="List&lt;Room&gt;" priority="28" />
+      <Item value="Room" priority="28" />
+      <Item value="Nr" priority="27" />
+      <Item value="Location" priority="27" />
+      <Item value="InternetAvailable" priority="27" />
+      <Item value="NumberOfSeats" priority="27" />
+      <Item value="PhoneAvailable" priority="27" />
+      <Item value="ProjectorAvailable" priority="27" />
+      <Item value="VideoconferenceAvailable" priority="27" />
+      <Item value="WhiteboardAvailable" priority="27" />
+      <Item value="StartTime" priority="27" />
+      <Item value="EndTime" priority="27" />
+      <Item value="Exception`0" priority="31" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.Routing.RequestContext">
+      <Item value="HttpContext" priority="22" />
+      <Item value="RouteData" priority="22" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.Routing.RouteData">
+      <Item value="RouteHandler" priority="26" />
+      <Item value="Route" priority="22" />
+    </ItemStatistics>
+    <ItemStatistics item="RazorTransitionCompletionContext">
+      <Item value="Html" priority="39" />
+      <Item value="DateTime`0" priority="53" />
+      <Item value="foreach" priority="7" />
+      <Item value="model" priority="23" />
+      <Item value="booking" priority="23" />
+      <Item value="RenderSection`0" priority="7" />
+      <Item value="section" priority="48" />
+      <Item value="Url" priority="23" />
+      <Item value="CssStyleCollection`0" priority="7" />
+      <Item value="IStyleSheet`0" priority="5" />
+      <Item value="myevent" priority="7" />
+      <Item value="Model" priority="19" />
+      <Item value="AddToList`0" priority="7" />
+      <Item value="product" priority="33" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.Mvc.HtmlHelper`1">
+      <Item value="ActionMenuItem`0" priority="22" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.DateTime">
+      <Item value="Today" priority="54" />
+      <Item value="Now" priority="436" />
+    </ItemStatistics>
+    <ItemStatistics item="HtmlCodeCompletionContext">
+      <Item value="background-color" priority="4" />
+      <Item value="h3" priority="6" />
+      <Item value="div" priority="136" />
+      <Item value="id" priority="95" />
+      <Item value="bookingItem" priority="25" />
+      <Item value="style" priority="175" />
+      <Item value="width" priority="14" />
+      <Item value="opacity" priority="4" />
+      <Item value="br" priority="17" />
+      <Item value="background-image" priority="8" />
+      <Item value="url" priority="4" />
+      <Item value="class" priority="18" />
+      <Item value="span" priority="11" />
+      <Item value="a" priority="11" />
+      <Item value="b" priority="25" />
+      <Item value="font" priority="8" />
+      <Item value="position" priority="9" />
+      <Item value="font-style" priority="4" />
+      <Item value="font-size" priority="4" />
+      <Item value="medium" priority="4" />
+      <Item value="margin-top" priority="4" />
+      <Item value="margin-right" priority="6" />
+      <Item value="float" priority="121" />
+      <Item value="top" priority="8" />
+      <Item value="fixed" priority="8" />
+      <Item value="display" priority="24" />
+      <Item value="none" priority="4" />
+      <Item value="language" priority="12" />
+      <Item value="javascript" priority="5" />
+      <Item value="Controllers" priority="5" />
+      <Item value="type" priority="85" />
+      <Item value="text/javascript" priority="71" />
+      <Item value="border" priority="6" />
+      <Item value="left" priority="14" />
+      <Item value="height" priority="11" />
+      <Item value="clear" priority="37" />
+      <Item value="content" priority="6" />
+      <Item value="script" priority="41" />
+      <Item value="Scripts" priority="11" />
+      <Item value="Styles" priority="11" />
+      <Item value="bookingEmne" priority="30" />
+      <Item value="lang" priority="6" />
+      <Item value="value" priority="5" />
+      <Item value="hidden" priority="4" />
+      <Item value="href" priority="5" />
+      <Item value="." priority="5" />
+      <Item value="input" priority="6" />
+      <Item value="onclick" priority="17" />
+      <Item value="AddToList" priority="6" />
+      <Item value="debugger" priority="11" />
+      <Item value="serverProcessor" priority="4" />
+      <Item value="alert" priority="8" />
+      <Item value="cleanUp" priority="4" />
+      <Item value="table" priority="11" />
+      <Item value="td" priority="5" />
+      <Item value="align" priority="5" />
+    </ItemStatistics>
+    <ItemStatistics item="CssCodeCompletionContext">
+      <Item value="background-color" priority="0" />
+      <Item value="height" priority="4" />
+      <Item value="width" priority="0" />
+      <Item value="opacity" priority="0" />
+      <Item value="bookingItemLIst" priority="4" />
+      <Item value="background-image" priority="0" />
+      <Item value="url" priority="1" />
+      <Item value="background-repeat" priority="5" />
+      <Item value="margin-top" priority="6" />
+      <Item value="font" priority="0" />
+      <Item value="position" priority="1" />
+      <Item value="font-style" priority="0" />
+      <Item value="font-size" priority="0" />
+      <Item value="medium" priority="1" />
+      <Item value="margin-right" priority="0" />
+      <Item value="background" priority="3" />
+      <Item value="float" priority="15" />
+      <Item value="top" priority="0" />
+      <Item value="fixed" priority="1" />
+      <Item value="bookingItemExt" priority="10" />
+      <Item value="display" priority="8" />
+      <Item value="none" priority="1" />
+      <Item value="padding" priority="5" />
+      <Item value="bookingItem" priority="4" />
+      <Item value="middlecontent" priority="7" />
+      <Item value="border" priority="0" />
+      <Item value="left" priority="0" />
+      <Item value="clear" priority="3" />
+      <Item value="Now" priority="0" />
+      <Item value="ToShortTimeString`0" priority="0" />
+      <Item value="ToShortDateString`0" priority="0" />
+      <Item value="bottom" priority="5" />
+      <Item value="nav_date" priority="9" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.DateTime">
+      <Item value="ToString`0" priority="239" />
+      <Item value="ToShortDateString`0" priority="128" />
+      <Item value="ToShortTimeString`0" priority="51" />
+      <Item value="AddHours`0" priority="22" />
+      <Item value="ToLocalTime`0" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="JavaScriptSpecificContext">
+      <Item value="this" priority="32" />
+      <Item value="" priority="4" />
+      <Item value="model" priority="5" />
+      <Item value="Model" priority="33" />
+      <Item value="MealOrder" priority="5" />
+      <Item value="Add`0" priority="17" />
+      <Item value="ContactIds" priority="16" />
+      <Item value="function" priority="32" />
+      <Item value="alert" priority="60" />
+      <Item value="event" priority="10" />
+      <Item value="EventArgs`0" priority="5" />
+      <Item value="TextAreaExtensions`0" priority="11" />
+      <Item value="parseInt" priority="7" />
+      <Item value="IDReferencePropertyAttribute`0" priority="5" />
+      <Item value="Id" priority="16" />
+      <Item value="Text" priority="5" />
+      <Item value="AddToList" priority="5" />
+      <Item value="First`1" priority="5" />
+      <Item value="FirstOrDefault`1" priority="4" />
+      <Item value="debugger" priority="10" />
+      <Item value="serverProcessor" priority="4" />
+      <Item value="cleanUp" priority="4" />
+      <Item value="$" priority="29" />
+      <Item value="document" priority="7" />
+      <Item value="else" priority="10" />
+    </ItemStatistics>
+    <ItemStatistics item="JavaScriptSpecificContextQualified">
+      <Item value="next" priority="7" />
+      <Item value="toString" priority="7" />
+      <Item value="id" priority="7" />
+      <Item value="attr" priority="7" />
+      <Item value="target" priority="8" />
+      <Item value="hasClass" priority="7" />
+      <Item value="isVisible" priority="7" />
+      <Item value="ready" priority="7" />
+      <Item value="addClass" priority="23" />
+      <Item value="removeAttr" priority="7" />
+      <Item value="_removeClass" priority="7" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:TeliaCore.Models.Booking">
+      <Item value="MødeTidspunktStart" priority="53" />
+      <Item value="MoedeEmne" priority="26" />
+      <Item value="MødeDagsorden" priority="26" />
+      <Item value="Id" priority="53" />
+      <Item value="DateStart" priority="96" />
+      <Item value="DateEnd" priority="27" />
+      <Item value="TimeStart" priority="27" />
+      <Item value="TimeEnd" priority="27" />
+      <Item value="Subject" priority="55" />
+      <Item value="Description" priority="55" />
+      <Item value="Invited" priority="27" />
+      <Item value="MealOrder" priority="150" />
+      <Item value="Host" priority="54" />
+      <Item value="RoomID" priority="27" />
+      <Item value="StartDate" priority="50" />
+      <Item value="Title" priority="27" />
+      <Item value="Contact" priority="126" />
+      <Item value="Room" priority="22" />
+      <Item value="ContactIds" priority="238" />
+      <Item value="MealId" priority="45" />
+      <Item value="MealDrinkId" priority="22" />
+      <Item value="MealOrderAmount" priority="22" />
+      <Item value="RoomId" priority="53" />
+      <Item value="MealWanted" priority="22" />
+      <Item value="MealOrderWanted" priority="22" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.IList`1">
+      <Item value="OrderBy`2" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:TeliaCore.Models.Stub">
+      <Item value="BookingStub`0" priority="49" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@TeliaCore.Models.Stub">
+      <Item value="Stub" priority="25" />
+      <Item value="BookingStub`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:TeliaCore.Models.Stub+BookingStub">
+      <Item value="BookingListe`0" priority="22" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.Mvc.UrlHelper">
+      <Item value="Content`0" priority="73" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:TeliaCore.Models.MyEventsDataContext">
+      <Item value="Events" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.Linq.Table`1">
+      <Item value="First`1" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:TeliaCore.Models.DatabaseStub">
+      <Item value="Bookings" priority="72" />
+      <Item value="SaveChanges`0" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Linq.IQueryable`1">
+      <Item value="FirstOrDefault`1" priority="26" />
+      <Item value="ToList`1" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.Entity.DbSet`1">
+      <Item value="Add`0" priority="130" />
+      <Item value="Find`0" priority="293" />
+      <Item value="All`1" priority="26" />
+      <Item value="ToList`1" priority="154" />
+      <Item value="Include`0" priority="54" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:TeliaCore.Services.IBookingService">
+      <Item value="Save`0" priority="26" />
+      <Item value="GetAll`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Castle.MicroKernel.Registration.Lifestyle.LifestyleGroup`1">
+      <Item value="Singleton" priority="49" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.DBNull">
+      <Item value="Value" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:TeliaCore.Models.Model1Container">
+      <Item value="Bookings" priority="211" />
+      <Item value="SaveChanges`0" priority="161" />
+      <Item value="Entry`1" priority="50" />
+      <Item value="MealOrders" priority="45" />
+      <Item value="Contacts" priority="400" />
+      <Item value="Rooms" priority="131" />
+      <Item value="MealTypes" priority="45" />
+      <Item value="RefreshmentItems" priority="132" />
+      <Item value="Products" priority="49" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.Entity.Infrastructure.DbEntityEntry`1">
+      <Item value="State" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Data.EntityState">
+      <Item value="Deleted" priority="22" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.Mvc.ModelStateDictionary">
+      <Item value="IsValid" priority="27" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.HttpSessionStateBase">
+      <Item value="Add`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.HttpContextBase">
+      <Item value="Session" priority="22" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:TeliaCore.Controllers.BookingController">
+      <Item value="Session" priority="49" />
+      <Item value="HttpContext" priority="22" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.List`1">
+      <Item value="Add`0" priority="226" />
+      <Item value="First`1" priority="29" />
+      <Item value="FirstOrDefault`1" priority="24" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:TeliaCore.Models.MealOrder">
+      <Item value="CoffeeWanted" priority="26" />
+      <Item value="MealType" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Web.Mvc.WebViewPage`1">
+      <Item value="" priority="24" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:TeliaCore.Models.MealType">
+      <Item value="MealOrder" priority="29" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.ICollection`1">
+      <Item value="Add`0" priority="29" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:TeliaCore.Models.Contact">
+      <Item value="Id" priority="53" />
+      <Item value="CreateDate" priority="53" />
+      <Item value="LastOnline" priority="53" />
+      <Item value="ToString`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.Entity.Infrastructure.DbEntityEntry">
+      <Item value="State" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:TeliaCore.Models.RefreshmentItem">
+      <Item value="Size" priority="22" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:TeliaCore.Models.Room">
+      <Item value="Name" priority="22" />
+      <Item value="Nr" priority="22" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:TeliaCore.Models.Product">
+      <Item value="Name" priority="22" />
+      <Item value="Description" priority="22" />
+      <Item value="Price" priority="26" />
+      <Item value="Size" priority="22" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="livetemplates.csharp.usevar">True</setting>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+</Configuration>
