@@ -1,0 +1,65 @@
+﻿@model TeliaCore.Models.Contact
+
+@{
+    ViewBag.Title = "ContactDetails";
+}
+
+<h2>ContactDetails</h2>
+
+<fieldset>
+    <legend>Contact</legend>
+
+    <div class="display-label">FirstName</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FirstName)
+    </div>
+
+    <div class="display-label">LastName</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LastName)
+    </div>
+
+    <div class="display-label">Initials</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Initials)
+    </div>
+
+    <div class="display-label">PhoneNumber</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PhoneNumber)
+    </div>
+
+    <div class="display-label">MobileNumber</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MobileNumber)
+    </div>
+
+    <div class="display-label">Email</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Email)
+    </div>
+
+    <div class="display-label">Department</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Department)
+    </div>
+
+    <div class="display-label">IsOnline</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.IsOnline)
+    </div>
+
+    <div class="display-label">LastOnline</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LastOnline)
+    </div>
+
+    <div class="display-label">CreateDate</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CreateDate)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

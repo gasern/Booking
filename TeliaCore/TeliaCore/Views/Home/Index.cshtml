@@ -1,0 +1,53 @@
+﻿@using System.Collections
+@using TeliaCore.HtmlHelpers
+@using TeliaCore.Models
+@model IList<Booking>
+
+@{
+    ViewBag.Title = "Dags dato";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="contentWrap"><!--NAVIGATION-->
+   <div class="leftContent" style="float:left; width:220px">
+        <ul class="navigation">
+            @Html.ActionSideMenuItem("Dagens bookinger", "Index", "Home")
+            @Html.ActionSideMenuItem("Kommende bookinger", "Index", "Kalender")
+            @Html.ActionSideMenuItem("Kalender", "Index", "Kalender")
+        </ul>
+        &nbsp;
+</div>
+    <h3 class="bookingbodyh3">Dags dato: @DateTime.Today.ToShortDateString()</h3>
+    <div id="bookingItemList" style="">
+        
+        @foreach (var booking in Model.OrderBy(x=>x.StartDate))
+        {
+             <div class="bookingItem">
+                <div id="bookingEmne" style="margin: 15px 0 0 10px">
+                    <span style="color: #6D4287;font-size: large; font-style:oblique;"><b style="margin-right: 15px">@booking.StartDate</b><b>@booking.Title</b></span><a><img style="position: fixed"
+                        src="../../Images/header-arrow.png" /></a>
+                </div>
+            </div>
+        
+            <div class="bookingItemExt">
+                @booking.Description
+            </div>
+        }
+    </div>
+</div>
+
+<script type="text/javascript">
+    $("li").click(function () {
+        $("li").removeClass("foldout");
+        $(this).toggleClass("foldout");
+    });
+
+    $(".bookingItem").click(function () {
+        if ($(this).next().is(":hidden")) {
+            $(this).next().slideDown("slow");
+        } else {
+            $(this).next().hide();
+        }
+
+    });
+</script>

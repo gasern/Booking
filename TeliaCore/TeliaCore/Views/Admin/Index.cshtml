@@ -1,0 +1,18 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Admin</h2>
+
+@Html.ActionLink("Kontakter", "ContactList", "Admin")
+<br/>
+@Html.ActionLink("Lokaler", "RoomCreate", "Admin")
+<br/>
+@Html.ActionLink("Forplejning", "ProductCreate", "Admin")
+<br/>
+<br/>
+<br/>
+<br/>
+@Html.ActionLink("Opret Databaseindhold", "CreateDatabaseContent", "Admin")
+

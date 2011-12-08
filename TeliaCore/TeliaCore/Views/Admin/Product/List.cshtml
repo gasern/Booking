@@ -1,0 +1,54 @@
+﻿@model IEnumerable<TeliaCore.Models.Product>
+
+@{
+    ViewBag.Title = "ProductList";
+}
+
+<h2>RefreshmentItemList</h2>
+
+<p>
+    @Html.ActionLink("Create New", "ProductCreate")
+</p>
+<table>
+    <tr>
+        <th>
+            Name
+        </th>
+        <th>
+            Description
+        </th>
+        <th>
+            Price
+        </th>
+        <th>
+            Size
+        </th>
+        <th>
+            RefreshmentsId
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Size)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "ProductEdit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "ProductDetails", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "ProductDelete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

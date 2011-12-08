@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Model1" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+  <EntityContainer Name="Model1Container" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Bookings" EntityType="Model1.Booking" />
+    <EntitySet Name="Contacts" EntityType="Model1.Contact" />
+    <AssociationSet Name="BookingContact" Association="Model1.BookingContact">
+      <End Role="Booking" EntitySet="Bookings" />
+      <End Role="Contact" EntitySet="Contacts" />
+    </AssociationSet>
+    <EntitySet Name="MealOrders" EntityType="Model1.MealOrder" />
+    <AssociationSet Name="ContactMealOrder" Association="Model1.ContactMealOrder">
+      <End EntitySet="Contacts" Role="Contact" />
+      <End EntitySet="MealOrders" Role="MealOrder" />
+    </AssociationSet>
+    <AssociationSet Name="BookingMealOrder" Association="Model1.BookingMealOrder">
+      <End EntitySet="Bookings" Role="Booking" />
+      <End EntitySet="MealOrders" Role="MealOrder" />
+    </AssociationSet>
+    <EntitySet Name="Rooms" EntityType="Model1.Room" />
+    <AssociationSet Name="RoomBooking" Association="Model1.RoomBooking">
+      <End Role="Room" EntitySet="Rooms" />
+      <End Role="Booking" EntitySet="Bookings" />
+    </AssociationSet>
+    <EntitySet Name="Products" EntityType="Model1.Product" />
+    <EntitySet Name="RefreshmentItems" EntityType="Model1.RefreshmentItem" />
+    <AssociationSet Name="MealOrdersRefreshments" Association="Model1.MealOrdersRefreshments">
+      <End Role="MealOrders" EntitySet="MealOrders" />
+      <End Role="Refreshments" EntitySet="RefreshmentItems" />
+    </AssociationSet>
+    <AssociationSet Name="RefreshmentItemProduct" Association="Model1.RefreshmentItemProduct">
+      <End Role="RefreshmentItem" EntitySet="RefreshmentItems" />
+      <End Role="Product" EntitySet="Products" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Booking">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Title" Nullable="false" />
+    <Property Type="String" Name="Description" Nullable="false" />
+    <Property Type="DateTime" Name="StartDate" Nullable="false" />
+    <Property Type="DateTime" Name="EndDate" Nullable="false" />
+    <Property Type="DateTime" Name="StartTime" Nullable="false" />
+    <Property Type="DateTime" Name="EndTime" Nullable="false" />
+    <Property Type="String" Name="Host" Nullable="false" />
+    <NavigationProperty Name="Contact" Relationship="Model1.BookingContact" FromRole="Booking" ToRole="Contact" />
+    <NavigationProperty Name="MealOrder" Relationship="Model1.BookingMealOrder" FromRole="Booking" ToRole="MealOrder" />
+    <NavigationProperty Name="Room" Relationship="Model1.RoomBooking" FromRole="Booking" ToRole="Room" />
+    <Property Type="Int32" Name="RoomId" Nullable="false" />
+    <Property Type="Boolean" Name="MealOrderWanted" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Contact">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="FirstName" Nullable="false" />
+    <Property Type="String" Name="LastName" Nullable="false" />
+    <Property Type="String" Name="Initials" Nullable="false" />
+    <Property Type="Int32" Name="PhoneNumber" Nullable="false" />
+    <Property Type="Int32" Name="MobileNumber" Nullable="true" />
+    <Property Type="String" Name="Email" Nullable="false" />
+    <Property Type="String" Name="Department" Nullable="false" />
+    <Property Type="Boolean" Name="IsOnline" Nullable="false" />
+    <Property Type="DateTime" Name="LastOnline" Nullable="false" />
+    <Property Type="DateTime" Name="CreateDate" Nullable="false" />
+    <NavigationProperty Name="Booking" Relationship="Model1.BookingContact" FromRole="Contact" ToRole="Booking" />
+    <NavigationProperty Name="MealOrder" Relationship="Model1.ContactMealOrder" FromRole="Contact" ToRole="MealOrder" />
+    <Property Type="String" Name="UserName" Nullable="false" />
+    <Property Type="String" Name="Password" Nullable="false" />
+    <Property Type="Boolean" Name="RememberMe" Nullable="true" />
+  </EntityType>
+  <Association Name="BookingContact">
+    <End Type="Model1.Booking" Role="Booking" Multiplicity="*" />
+    <End Type="Model1.Contact" Role="Contact" Multiplicity="*" />
+  </Association>
+  <EntityType Name="MealOrder">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
+    <Property Name="CoffeeWanted" Nullable="false" Type="Boolean" />
+    <Property Name="TeaWanted" Nullable="false" Type="Boolean" />
+    <Property Name="NumberOfDiningGuests" Nullable="false" Type="Int16" />
+    <Property Name="DishWishServedAt" Nullable="false" Type="DateTime" />
+    <Property Name="DepartmentCharged" Nullable="false" Type="String" />
+    <Property Name="DepartmentCreditNumber" Nullable="false" Type="String" />
+    <Property Name="TotalPrice" Nullable="false" Type="Decimal" />
+    <NavigationProperty Name="Contact" Relationship="Model1.ContactMealOrder" FromRole="MealOrder" ToRole="Contact" />
+    <Property Name="ContactId" Nullable="false" Type="Int32" />
+    <NavigationProperty Name="Booking" Relationship="Model1.BookingMealOrder" FromRole="MealOrder" ToRole="Booking" />
+    <NavigationProperty Name="Refreshments" Relationship="Model1.MealOrdersRefreshments" FromRole="MealOrders" ToRole="Refreshments" />
+  </EntityType>
+  <Association Name="ContactMealOrder">
+    <End Type="Model1.Contact" Multiplicity="1" Role="Contact" />
+    <End Type="Model1.MealOrder" Multiplicity="*" Role="MealOrder" />
+    <ReferentialConstraint>
+      <Principal Role="Contact">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="MealOrder">
+        <PropertyRef Name="ContactId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="BookingMealOrder">
+    <End Type="Model1.Booking" Multiplicity="1" Role="Booking" />
+    <End Type="Model1.MealOrder" Multiplicity="0..1" Role="MealOrder" />
+  </Association>
+  <EntityType Name="Room">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Name" Nullable="false" />
+    <Property Type="String" Name="Description" Nullable="false" />
+    <Property Type="Int16" Name="Nr" Nullable="false" />
+    <Property Type="String" Name="Location" Nullable="false" />
+    <Property Type="Int16" Name="NumberOfSeats" Nullable="false" />
+    <Property Type="Boolean" Name="InternetAvailable" Nullable="false" />
+    <Property Type="Boolean" Name="ProjectorAvailable" Nullable="false" />
+    <Property Type="Boolean" Name="PhoneAvailable" Nullable="false" />
+    <Property Type="Boolean" Name="WhiteboardAvailable" Nullable="false" />
+    <Property Type="Boolean" Name="VideoconferenceAvailable" Nullable="false" />
+    <NavigationProperty Name="Booking" Relationship="Model1.RoomBooking" FromRole="Room" ToRole="Booking" />
+  </EntityType>
+  <Association Name="RoomBooking">
+    <End Type="Model1.Room" Role="Room" Multiplicity="1" />
+    <End Type="Model1.Booking" Role="Booking" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Room">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Booking">
+        <PropertyRef Name="RoomId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Description" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="Price" Nullable="false" />
+    <Property Type="String" Name="Size" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RefreshmentItem">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="Quantity" Nullable="false" />
+    <NavigationProperty Name="MealOrders" Relationship="Model1.MealOrdersRefreshments" FromRole="Refreshments" ToRole="MealOrders" />
+    <Property Type="Int32" Name="MealOrdersId" Nullable="false" />
+    <NavigationProperty Name="Product" Relationship="Model1.RefreshmentItemProduct" FromRole="RefreshmentItem" ToRole="Product" />
+  </EntityType>
+  <Association Name="MealOrdersRefreshments">
+    <End Type="Model1.MealOrder" Role="MealOrders" Multiplicity="1" />
+    <End Type="Model1.RefreshmentItem" Role="Refreshments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MealOrders">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Refreshments">
+        <PropertyRef Name="MealOrdersId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefreshmentItemProduct">
+    <End Type="Model1.RefreshmentItem" Role="RefreshmentItem" Multiplicity="0..1" />
+    <End Type="Model1.Product" Role="Product" Multiplicity="1" />
+  </Association>
+</Schema>

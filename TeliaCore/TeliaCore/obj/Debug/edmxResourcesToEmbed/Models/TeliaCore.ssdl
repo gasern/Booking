@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model1.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="Model1StoreContainer">
+    <EntitySet Name="Bookings" EntityType="Model1.Store.Bookings" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Contacts" EntityType="Model1.Store.Contacts" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MealOrders" EntityType="Model1.Store.MealOrders" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Rooms" EntityType="Model1.Store.Rooms" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Products" EntityType="Model1.Store.Products" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="RefreshmentItems" EntityType="Model1.Store.RefreshmentItems" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="BookingContact" EntityType="Model1.Store.BookingContact" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_BookingContact_Booking" Association="Model1.Store.FK_BookingContact_Booking">
+      <End Role="Booking" EntitySet="Bookings" />
+      <End Role="BookingContact" EntitySet="BookingContact" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BookingContact_Contact" Association="Model1.Store.FK_BookingContact_Contact">
+      <End Role="Contact" EntitySet="Contacts" />
+      <End Role="BookingContact" EntitySet="BookingContact" />
+    </AssociationSet>
+    <AssociationSet Name="ContactMealOrder" Association="Model1.Store.ContactMealOrder">
+      <End Role="Contact" EntitySet="Contacts" />
+      <End Role="MealOrder" EntitySet="MealOrders" />
+    </AssociationSet>
+    <AssociationSet Name="BookingMealOrder" Association="Model1.Store.BookingMealOrder">
+      <End Role="Booking" EntitySet="Bookings" />
+      <End Role="MealOrder" EntitySet="MealOrders" />
+    </AssociationSet>
+    <AssociationSet Name="RoomBooking" Association="Model1.Store.RoomBooking">
+      <End Role="Room" EntitySet="Rooms" />
+      <End Role="Booking" EntitySet="Bookings" />
+    </AssociationSet>
+    <AssociationSet Name="MealOrdersRefreshments" Association="Model1.Store.MealOrdersRefreshments">
+      <End Role="MealOrders" EntitySet="MealOrders" />
+      <End Role="Refreshments" EntitySet="RefreshmentItems" />
+    </AssociationSet>
+    <AssociationSet Name="RefreshmentItemProduct" Association="Model1.Store.RefreshmentItemProduct">
+      <End Role="RefreshmentItem" EntitySet="RefreshmentItems" />
+      <End Role="Product" EntitySet="Products" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Bookings">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="StartDate" Type="datetime" Nullable="false" />
+    <Property Name="EndDate" Type="datetime" Nullable="false" />
+    <Property Name="StartTime" Type="datetime" Nullable="false" />
+    <Property Name="EndTime" Type="datetime" Nullable="false" />
+    <Property Name="Host" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="RoomId" Type="int" Nullable="false" />
+    <Property Name="MealOrderWanted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Contacts">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="LastName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Initials" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="PhoneNumber" Type="int" Nullable="false" />
+    <Property Name="MobileNumber" Type="int" Nullable="true" />
+    <Property Name="Email" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Department" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="IsOnline" Type="bit" Nullable="false" />
+    <Property Name="LastOnline" Type="datetime" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Password" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="RememberMe" Type="bit" Nullable="true" />
+  </EntityType>
+  <EntityType Name="MealOrders">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CoffeeWanted" Type="bit" Nullable="false" />
+    <Property Name="TeaWanted" Type="bit" Nullable="false" />
+    <Property Name="NumberOfDiningGuests" Type="smallint" Nullable="false" />
+    <Property Name="DishWishServedAt" Type="datetime" Nullable="false" />
+    <Property Name="DepartmentCharged" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DepartmentCreditNumber" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="TotalPrice" Type="decimal" Nullable="false" />
+    <Property Name="ContactId" Type="int" Nullable="false" />
+    <Property Name="Booking_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Rooms">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Nr" Type="smallint" Nullable="false" />
+    <Property Name="Location" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="NumberOfSeats" Type="smallint" Nullable="false" />
+    <Property Name="InternetAvailable" Type="bit" Nullable="false" />
+    <Property Name="ProjectorAvailable" Type="bit" Nullable="false" />
+    <Property Name="PhoneAvailable" Type="bit" Nullable="false" />
+    <Property Name="WhiteboardAvailable" Type="bit" Nullable="false" />
+    <Property Name="VideoconferenceAvailable" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Products">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Price" Type="decimal" Nullable="false" />
+    <Property Name="Size" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RefreshmentItems">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Quantity" Type="int" Nullable="false" />
+    <Property Name="MealOrdersId" Type="int" Nullable="false" />
+    <Property Name="Product_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BookingContact">
+    <Key>
+      <PropertyRef Name="Booking_Id" />
+      <PropertyRef Name="Contact_Id" />
+    </Key>
+    <Property Name="Booking_Id" Type="int" Nullable="false" />
+    <Property Name="Contact_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="ContactMealOrder">
+    <End Role="Contact" Type="Model1.Store.Contacts" Multiplicity="1" />
+    <End Role="MealOrder" Type="Model1.Store.MealOrders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Contact">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="MealOrder">
+        <PropertyRef Name="ContactId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="BookingMealOrder">
+    <End Role="Booking" Type="Model1.Store.Bookings" Multiplicity="1" />
+    <End Role="MealOrder" Type="Model1.Store.MealOrders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Booking">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="MealOrder">
+        <PropertyRef Name="Booking_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RoomBooking">
+    <End Role="Room" Type="Model1.Store.Rooms" Multiplicity="1" />
+    <End Role="Booking" Type="Model1.Store.Bookings" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Room">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Booking">
+        <PropertyRef Name="RoomId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="MealOrdersRefreshments">
+    <End Role="MealOrders" Type="Model1.Store.MealOrders" Multiplicity="1" />
+    <End Role="Refreshments" Type="Model1.Store.RefreshmentItems" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MealOrders">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Refreshments">
+        <PropertyRef Name="MealOrdersId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefreshmentItemProduct">
+    <End Role="RefreshmentItem" Type="Model1.Store.RefreshmentItems" Multiplicity="*" />
+    <End Role="Product" Type="Model1.Store.Products" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="RefreshmentItem">
+        <PropertyRef Name="Product_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BookingContact_Booking">
+    <End Role="Booking" Type="Model1.Store.Bookings" Multiplicity="1" />
+    <End Role="BookingContact" Type="Model1.Store.BookingContact" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Booking">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="BookingContact">
+        <PropertyRef Name="Booking_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BookingContact_Contact">
+    <End Role="BookingContact" Type="Model1.Store.BookingContact" Multiplicity="*" />
+    <End Role="Contact" Type="Model1.Store.Contacts" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Contact">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="BookingContact">
+        <PropertyRef Name="Contact_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

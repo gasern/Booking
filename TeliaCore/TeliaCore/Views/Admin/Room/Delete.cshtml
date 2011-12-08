@@ -1,0 +1,68 @@
+﻿@model TeliaCore.Models.Room
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Room</legend>
+
+    <div class="display-label">Name</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Name)
+    </div>
+
+    <div class="display-label">Description</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Description)
+    </div>
+
+    <div class="display-label">Nr</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Nr)
+    </div>
+
+    <div class="display-label">Location</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Location)
+    </div>
+
+    <div class="display-label">NumberOfSeats</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NumberOfSeats)
+    </div>
+
+    <div class="display-label">InternetAvailable</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.InternetAvailable)
+    </div>
+
+    <div class="display-label">ProjectorAvailable</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ProjectorAvailable)
+    </div>
+
+    <div class="display-label">PhoneAvailable</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PhoneAvailable)
+    </div>
+
+    <div class="display-label">WhiteboardAvailable</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.WhiteboardAvailable)
+    </div>
+
+    <div class="display-label">VideoconferenceAvailable</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.VideoconferenceAvailable)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

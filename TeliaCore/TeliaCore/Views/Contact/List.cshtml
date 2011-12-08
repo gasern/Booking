@@ -1,0 +1,87 @@
+﻿@model IEnumerable<TeliaCore.Models.Contact>
+
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>List</h2>
+
+<p>
+    @Html.ActionLink("Create New", "ContactCreate", "Admin")
+</p>
+<table>
+    <tr>
+        <th>
+            FirstName
+        </th>
+        <th>
+            LastName
+        </th>
+        <th>
+            Initials
+        </th>
+        <th>
+            PhoneNumber
+        </th>
+        <th>
+            MobileNumber
+        </th>
+        <th>
+            Email
+        </th>
+        <th>
+            Department
+        </th>
+        <th>
+            IsOnline
+        </th>
+        <th>
+            LastOnline
+        </th>
+        <th>
+            CreateDate
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Initials)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PhoneNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MobileNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Department)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsOnline)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastOnline)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreateDate)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "ContactEdit", "Admin", new { id=item.Id }) |
+            @Html.ActionLink("Details", "ContactDetails", "Admin", new { id = item.Id }) |
+            @Html.ActionLink("Delete", "ContactDelete","Admin", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>
