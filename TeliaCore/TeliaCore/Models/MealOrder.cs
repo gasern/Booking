@@ -20,17 +20,14 @@ namespace TeliaCore.Models
         }
     
         public int Id { get; set; }
-        public bool CoffeeWanted { get; set; }
-        public bool TeaWanted { get; set; }
-        public short NumberOfDiningGuests { get; set; }
+        public int NumberOfDiningGuests { get; set; }
         public System.DateTime DishWishServedAt { get; set; }
         public string DepartmentCharged { get; set; }
         public string DepartmentCreditNumber { get; set; }
         public decimal TotalPrice { get; set; }
-        public int ContactId { get; set; }
     
-        public virtual Contact Contact { get; set; }
         public virtual Booking Booking { get; set; }
         public virtual ICollection<RefreshmentItem> Refreshments { get; set; }
+        public virtual Contact Contact { get; set; }
     }
 }

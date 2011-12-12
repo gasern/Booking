@@ -7,8 +7,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using System.ComponentModel.DataAnnotations;
-
 namespace TeliaCore.Models
 {
     using System;
@@ -18,36 +16,19 @@ namespace TeliaCore.Models
     {
         public Booking()
         {
-            this.Contact = new HashSet<Contact>();
+            this.Contacts = new HashSet<Contact>();
         }
     
         public int Id { get; set; }
-        
         public string Title { get; set; }
-        
         public string Description { get; set; }
-   
-        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:d}")]
-        public System.DateTime? StartDate { get; set; }
-   
-        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:d}")]
-        public System.DateTime? EndDate { get; set; }
-   
-        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{t}")]
-        public System.DateTime? StartTime { get; set; }
-        
-        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{t}")]
-        public System.DateTime? EndTime { get; set; }
-
+        public System.DateTime StartDate { get; set; }
+        public System.DateTime EndDate { get; set; }
+        public System.DateTime StartTime { get; set; }
+        public System.DateTime EndTime { get; set; }
         public string Host { get; set; }
-        
-        public int RoomId { get; set; }
-        
-        public bool MealOrderWanted { get; set; }
-        
-        public List<int> ContactIds { get; set; }
-
-        public virtual ICollection<Contact> Contact { get; set; }
+    
+        public virtual ICollection<Contact> Contacts { get; set; }
         public virtual MealOrder MealOrder { get; set; }
         public virtual Room Room { get; set; }
     }

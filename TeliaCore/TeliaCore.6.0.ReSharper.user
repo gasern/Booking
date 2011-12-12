@@ -1,13 +1,6 @@
 <Configuration>
   <RecentFiles>
     <RecentFiles>
-      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Admin/d:Room/f:Delete.cshtml" caret="0" fromTop="0" />
-      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Admin/d:Room/f:List.cshtml" caret="0" fromTop="0" />
-      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Admin/d:Contact/f:Delete.cshtml" caret="0" fromTop="0" />
-      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Admin/d:Contact/f:Edit.cshtml" caret="0" fromTop="0" />
-      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Admin/d:Contact/f:Index.cshtml" caret="0" fromTop="0" />
-      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Admin/d:Contact/f:Create.cshtml" caret="0" fromTop="0" />
-      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Admin/d:Contact/f:List.cshtml" caret="0" fromTop="0" />
       <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Booking/f:Index_.cshtml" caret="0" fromTop="0" />
       <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Booking/f:Index.cshtml" caret="0" fromTop="0" />
       <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Booking/f:Create_.cshtml" caret="0" fromTop="0" />
@@ -21,31 +14,25 @@
       <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Booking/f:AddRoom.cshtml" caret="0" fromTop="0" />
       <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Booking/f:AddContacts.cshtml" caret="0" fromTop="0" />
       <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Booking/f:Delete.cshtml" caret="0" fromTop="0" />
-      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Controllers/f:AccountController.cs" caret="0" fromTop="0" />
       <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Booking/f:Edit.cshtml" caret="0" fromTop="0" />
       <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Booking/f:Details.cshtml" caret="0" fromTop="0" />
-      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Controllers/f:BookingController.cs" caret="2113" fromTop="29" />
-      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Controllers/f:HomeController.cs" caret="489" fromTop="20" />
       <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Home/f:Index.cshtml" caret="193" fromTop="8" />
       <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Shared/f:_ViewStart.cshtml" caret="0" fromTop="0" />
       <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Shared/f:_Layout.cshtml" caret="1202" fromTop="35" />
       <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Content/f:Site.css" caret="7671" fromTop="28" />
+      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Models/f:AccountModels.cs" caret="970" fromTop="23" />
+      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Account/f:LogOn.cshtml" caret="0" fromTop="0" />
+      <File id="4C2A4355-4655-4680-9EFF-E7CB0DAB3473/f:System.Web.Security.FormsAuthentication.cs" caret="483" fromTop="10" />
+      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Controllers/f:AccountController.cs" caret="1825" fromTop="14" />
+      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Admin/f:Index.cshtml" caret="310" fromTop="15" />
+      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:HtmlHelpers/f:HtmlExtension.cs" caret="411" fromTop="0" />
+      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Kalender/f:Index.cshtml" caret="1258" fromTop="38" />
+      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Controllers/f:BookingController.cs" caret="736" fromTop="20" />
       <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Booking/f:Create.cshtml" caret="4322" fromTop="14" />
+      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Controllers/f:HomeController.cs" caret="501" fromTop="20" />
+      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Controllers/f:AdminController.cs" caret="6056" fromTop="102" />
     </RecentFiles>
     <RecentEdits>
-      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Shared/f:_Layout.cshtml" caret="1202" fromTop="35" />
-      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Booking/f:Create.cshtml" caret="474" fromTop="23" />
-      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Booking/f:Create.cshtml" caret="5174" fromTop="22" />
-      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Booking/f:Create.cshtml" caret="7133" fromTop="18" />
-      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Booking/f:Create.cshtml" caret="7823" fromTop="20" />
-      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Booking/f:Create.cshtml" caret="8463" fromTop="22" />
-      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Booking/f:Create.cshtml" caret="10186" fromTop="24" />
-      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Booking/f:Create.cshtml" caret="442" fromTop="16" />
-      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Booking/f:Create.cshtml" caret="442" fromTop="16" />
-      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Booking/f:Create.cshtml" caret="13576" fromTop="33" />
-      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Booking/f:Create.cshtml" caret="13576" fromTop="37" />
-      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Booking/f:Create.cshtml" caret="13576" fromTop="8" />
-      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Booking/f:Create.cshtml" caret="13576" fromTop="15" />
       <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Booking/f:Create.cshtml" caret="13576" fromTop="23" />
       <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Booking/f:Create.cshtml" caret="12083" fromTop="17" />
       <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Booking/f:Create.cshtml" caret="12083" fromTop="25" />
@@ -63,6 +50,19 @@
       <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Booking/f:Create.cshtml" caret="3511" fromTop="21" />
       <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Booking/f:Create.cshtml" caret="3920" fromTop="26" />
       <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Booking/f:Create.cshtml" caret="4322" fromTop="31" />
+      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Views/d:Admin/f:Index.cshtml" caret="310" fromTop="15" />
+      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Controllers/f:AccountController.cs" caret="294" fromTop="13" />
+      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Controllers/f:AccountController.cs" caret="841" fromTop="31" />
+      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Controllers/f:AccountController.cs" caret="427" fromTop="17" />
+      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Controllers/f:AccountController.cs" caret="939" fromTop="22" />
+      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Controllers/f:AccountController.cs" caret="1567" fromTop="33" />
+      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Controllers/f:AccountController.cs" caret="1582" fromTop="38" />
+      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Controllers/f:AccountController.cs" caret="991" fromTop="21" />
+      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Controllers/f:AdminController.cs" caret="5602" fromTop="10" />
+      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Controllers/f:AdminController.cs" caret="6306" fromTop="26" />
+      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Controllers/f:AdminController.cs" caret="5363" fromTop="20" />
+      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Controllers/f:AdminController.cs" caret="4674" fromTop="4" />
+      <File id="3671B9DC-BBE3-4BBC-A140-2E35E590DF99/d:Controllers/f:AdminController.cs" caret="6056" fromTop="36" />
     </RecentEdits>
   </RecentFiles>
   <CompletionStatisticsManager>
@@ -72,16 +72,16 @@
       <Item value="prop" priority="1695" />
       <Item value="int" priority="936" />
       <Item value="DateTime`0" priority="791" />
-      <Item value="string" priority="370" />
+      <Item value="string" priority="402" />
       <Item value="List" priority="568" />
       <Item value="bool" priority="278" />
       <Item value="Booking`0" priority="491" />
       <Item value="Decimal`0" priority="30" />
-      <Item value="public" priority="410" />
+      <Item value="public" priority="442" />
       <Item value="ActionResult`0" priority="191" />
       <Item value="return" priority="639" />
       <Item value="View`0" priority="255" />
-      <Item value="new" priority="1156" />
+      <Item value="new" priority="1220" />
       <Item value="var" priority="668" />
       <Item value="BookingController" priority="28" />
       <Item value="Id" priority="91" />
@@ -117,7 +117,7 @@
       <Item value="in" priority="31" />
       <Item value="List&lt;Booking&gt;" priority="28" />
       <Item value="booking" priority="1313" />
-      <Item value="model" priority="89" />
+      <Item value="model" priority="153" />
       <Item value="IList" priority="31" />
       <Item value="HomeController`0" priority="31" />
       <Item value="Stub`0" priority="30" />
@@ -175,7 +175,7 @@
       <Item value="TimeEnd" priority="27" />
       <Item value="_booking" priority="31" />
       <Item value="try" priority="63" />
-      <Item value="true" priority="227" />
+      <Item value="true" priority="259" />
       <Item value="false" priority="194" />
       <Item value="BookingController`0" priority="63" />
       <Item value="_bookingService" priority="90" />
@@ -200,7 +200,7 @@
       <Item value="using" priority="30" />
       <Item value="TeliaCoreContainer" priority="28" />
       <Item value="Model1Container`0" priority="62" />
-      <Item value="Model1Container" priority="58" />
+      <Item value="Model1Container" priority="87" />
       <Item value="DBNull`0" priority="31" />
       <Item value="Modified" priority="16" />
       <Item value="ModelState" priority="26" />
@@ -251,7 +251,7 @@
       <Item value="id" priority="125" />
       <Item value="HtmlHelper`0" priority="26" />
       <Item value="htmlHelper" priority="64" />
-      <Item value="_db" priority="756" />
+      <Item value="_db" priority="788" />
       <Item value="excistingContact" priority="30" />
       <Item value="ContactList" priority="244" />
       <Item value="ContactDelete" priority="55" />
@@ -321,6 +321,13 @@
       <Item value="StartTime" priority="27" />
       <Item value="EndTime" priority="27" />
       <Item value="Exception`0" priority="31" />
+      <Item value="XmlSiteMapProvider`0" priority="63" />
+      <Item value="x" priority="63" />
+      <Item value="p" priority="31" />
+      <Item value="pass" priority="31" />
+      <Item value="user" priority="63" />
+      <Item value="is" priority="31" />
+      <Item value="AccountController`0" priority="31" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Web.Routing.RequestContext">
       <Item value="HttpContext" priority="22" />
@@ -547,15 +554,18 @@
       <Item value="SaveChanges`0" priority="53" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Linq.IQueryable`1">
-      <Item value="FirstOrDefault`1" priority="26" />
+      <Item value="FirstOrDefault`1" priority="53" />
       <Item value="ToList`1" priority="26" />
+      <Item value="Where`1" priority="26" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Data.Entity.DbSet`1">
       <Item value="Add`0" priority="130" />
-      <Item value="Find`0" priority="293" />
+      <Item value="Find`0" priority="320" />
       <Item value="All`1" priority="26" />
       <Item value="ToList`1" priority="154" />
       <Item value="Include`0" priority="54" />
+      <Item value="Select`2" priority="22" />
+      <Item value="Where`1" priority="22" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:TeliaCore.Services.IBookingService">
       <Item value="Save`0" priority="26" />
@@ -572,7 +582,7 @@
       <Item value="SaveChanges`0" priority="161" />
       <Item value="Entry`1" priority="50" />
       <Item value="MealOrders" priority="45" />
-      <Item value="Contacts" priority="400" />
+      <Item value="Contacts" priority="427" />
       <Item value="Rooms" priority="131" />
       <Item value="MealTypes" priority="45" />
       <Item value="RefreshmentItems" priority="132" />
@@ -585,7 +595,7 @@
       <Item value="Deleted" priority="22" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Web.Mvc.ModelStateDictionary">
-      <Item value="IsValid" priority="27" />
+      <Item value="IsValid" priority="50" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Web.HttpSessionStateBase">
       <Item value="Add`0" priority="26" />
@@ -620,6 +630,8 @@
       <Item value="CreateDate" priority="53" />
       <Item value="LastOnline" priority="53" />
       <Item value="ToString`0" priority="26" />
+      <Item value="Password" priority="80" />
+      <Item value="FirstName" priority="26" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Data.Entity.Infrastructure.DbEntityEntry">
       <Item value="State" priority="26" />
@@ -636,6 +648,13 @@
       <Item value="Description" priority="22" />
       <Item value="Price" priority="26" />
       <Item value="Size" priority="22" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:TeliaCore.Models.LogOnModel">
+      <Item value="Password" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.String">
+      <Item value="IsInterned`0" priority="26" />
+      <Item value="IsNullOrEmpty`0" priority="22" />
     </ItemStatistics>
   </CompletionStatisticsManager>
   <NAntValidationSettings>

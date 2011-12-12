@@ -4,6 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Castle.Components.DictionaryAdapter;
 using TeliaCore.Models;
 
 namespace TeliaCore.Controllers
@@ -39,7 +40,7 @@ namespace TeliaCore.Controllers
             ViewData["AllContacts"] = db.Contacts.ToList();
             ViewData["AllRooms"] = db.Rooms.ToList();
             ViewData["AllProducts"] = db.Products.ToList();
-            var booking = new Booking()
+            var booking = new BookingExt()
                               {
                                   StartDate = DateTime.Now,
                                   EndDate = DateTime.Now
@@ -50,34 +51,17 @@ namespace TeliaCore.Controllers
 
      
         [HttpPost]
-        public ActionResult AddBooking(Booking booking, List<int> ProductIds)
+        public ActionResult AddBooking(BookingExt bookingExt, List<int> ProductIds)
         {
             try
             {
+                var booking = MapBookingExtToBooking(bookingExt, ProductIds);
 
-                var contacts = AddContactsToBooking(booking);
-                if (contacts == null)
-                    return JsonFejlmeddelelse("Manglende kontakter, forhindre bookingen i at blive gennemført");
-                else
-                {
-                    booking.Contact = contacts;
-                }
-
-                var room = AddRoomToBooking(booking);
-                if (room == null)
-                    return JsonFejlmeddelelse("Der er angivet et ugyldigt mødelokale");
-                else
-                {
-                    booking.Room = room;
-                }
-
-                booking.Host = "Jimmie Rindal";
-
-                
                 db.Bookings.Add(booking);
+                
                 db.SaveChanges();
 
-                 return PartialView("AddContacts",booking.Contact);
+                 return PartialView("AddContacts",booking.Contacts);
             }
             catch(Exception e)
             {
@@ -85,7 +69,71 @@ namespace TeliaCore.Controllers
             }
         }
 
-        private List<Contact> AddContactsToBooking(Booking booking)
+        private Booking MapBookingExtToBooking(BookingExt bookingExt, List<int> productIds)
+        {
+            try
+            {
+                var contacts = AddContactsToBooking(bookingExt);
+                if (contacts == null)
+                    return null;
+               
+                var room = AddRoomToBooking(bookingExt);
+                if (room == null)
+                    return null;
+
+                var bookingFinal = new Booking()
+                {
+                    Title = bookingExt.Title,
+                    Description = bookingExt.Description,
+                    StartDate = bookingExt.StartDate,
+                    EndDate = bookingExt.EndDate,
+                    StartTime = bookingExt.StartTime,
+                    EndTime = bookingExt.EndTime,
+                    Host = "Jimmie Rindal",
+                    Contacts = contacts,
+                    Room = room
+                };
+
+                if (bookingExt.MealOrderWanted)
+                {
+                    var refreshments = AddRefreshmentsToMealOrder(productIds);
+                    var mealOrder = new MealOrder()
+                    {
+                        Booking = bookingFinal,
+                        NumberOfDiningGuests = bookingFinal.Contacts.Count(),
+                        DepartmentCharged = "Department",
+                        DepartmentCreditNumber = "000000",
+                        DishWishServedAt = DateTime.Now,
+                        Refreshments = refreshments,
+                        TotalPrice = refreshments.Sum(r=>r.Product.Price),//TODO check
+                        Contact = db.Contacts.FirstOrDefault() //TODO get profile from session
+                    };
+
+                    bookingFinal.MealOrder = mealOrder;
+                }
+            }
+            catch (Exception)
+            {
+                 throw;
+            }
+            return null;
+        }
+
+        private IList<RefreshmentItem> AddRefreshmentsToMealOrder(List<int> productIds)
+        {
+            IList<RefreshmentItem> refreshments = new EditableList<RefreshmentItem>();
+            foreach (var productId in productIds)
+            {
+                var refreshmentItem = db.RefreshmentItems.Find(productId);
+                if (refreshmentItem != null)
+                {
+                    refreshments.Add(refreshmentItem);
+                }
+            }
+            return refreshments;
+        }
+
+        private ICollection<Contact> AddContactsToBooking(BookingExt booking)
         {
             var contacts = new List<Contact>();
             foreach (var contactId in booking.ContactIds)
@@ -99,7 +147,7 @@ namespace TeliaCore.Controllers
             return contacts;
         }
 
-        private Room AddRoomToBooking(Booking booking)
+        private Room AddRoomToBooking(BookingExt booking)
         {
             return db.Rooms.Find(booking.RoomId);
         }

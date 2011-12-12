@@ -8,19 +8,11 @@
       <End Role="Contact" EntitySet="Contacts" />
     </AssociationSet>
     <EntitySet Name="MealOrders" EntityType="Model1.MealOrder" />
-    <AssociationSet Name="ContactMealOrder" Association="Model1.ContactMealOrder">
-      <End EntitySet="Contacts" Role="Contact" />
-      <End EntitySet="MealOrders" Role="MealOrder" />
-    </AssociationSet>
     <AssociationSet Name="BookingMealOrder" Association="Model1.BookingMealOrder">
       <End EntitySet="Bookings" Role="Booking" />
       <End EntitySet="MealOrders" Role="MealOrder" />
     </AssociationSet>
     <EntitySet Name="Rooms" EntityType="Model1.Room" />
-    <AssociationSet Name="RoomBooking" Association="Model1.RoomBooking">
-      <End Role="Room" EntitySet="Rooms" />
-      <End Role="Booking" EntitySet="Bookings" />
-    </AssociationSet>
     <EntitySet Name="Products" EntityType="Model1.Product" />
     <EntitySet Name="RefreshmentItems" EntityType="Model1.RefreshmentItem" />
     <AssociationSet Name="MealOrdersRefreshments" Association="Model1.MealOrdersRefreshments">
@@ -30,6 +22,14 @@
     <AssociationSet Name="RefreshmentItemProduct" Association="Model1.RefreshmentItemProduct">
       <End Role="RefreshmentItem" EntitySet="RefreshmentItems" />
       <End Role="Product" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="BookingRoom" Association="Model1.BookingRoom">
+      <End Role="Booking" EntitySet="Bookings" />
+      <End Role="Room" EntitySet="Rooms" />
+    </AssociationSet>
+    <AssociationSet Name="MealOrderContact" Association="Model1.MealOrderContact">
+      <End Role="MealOrder" EntitySet="MealOrders" />
+      <End Role="Contact" EntitySet="Contacts" />
     </AssociationSet>
   </EntityContainer>
   <EntityType Name="Booking">
@@ -44,11 +44,9 @@
     <Property Type="DateTime" Name="StartTime" Nullable="false" />
     <Property Type="DateTime" Name="EndTime" Nullable="false" />
     <Property Type="String" Name="Host" Nullable="false" />
-    <NavigationProperty Name="Contact" Relationship="Model1.BookingContact" FromRole="Booking" ToRole="Contact" />
+    <NavigationProperty Name="Contacts" Relationship="Model1.BookingContact" FromRole="Booking" ToRole="Contact" />
     <NavigationProperty Name="MealOrder" Relationship="Model1.BookingMealOrder" FromRole="Booking" ToRole="MealOrder" />
-    <NavigationProperty Name="Room" Relationship="Model1.RoomBooking" FromRole="Booking" ToRole="Room" />
-    <Property Type="Int32" Name="RoomId" Nullable="false" />
-    <Property Type="Boolean" Name="MealOrderWanted" Nullable="false" />
+    <NavigationProperty Name="Room" Relationship="Model1.BookingRoom" FromRole="Booking" ToRole="Room" />
   </EntityType>
   <EntityType Name="Contact">
     <Key>
@@ -66,10 +64,10 @@
     <Property Type="DateTime" Name="LastOnline" Nullable="false" />
     <Property Type="DateTime" Name="CreateDate" Nullable="false" />
     <NavigationProperty Name="Booking" Relationship="Model1.BookingContact" FromRole="Contact" ToRole="Booking" />
-    <NavigationProperty Name="MealOrder" Relationship="Model1.ContactMealOrder" FromRole="Contact" ToRole="MealOrder" />
     <Property Type="String" Name="UserName" Nullable="false" />
     <Property Type="String" Name="Password" Nullable="false" />
     <Property Type="Boolean" Name="RememberMe" Nullable="true" />
+    <NavigationProperty Name="MealOrder" Relationship="Model1.MealOrderContact" FromRole="Contact" ToRole="MealOrder" />
   </EntityType>
   <Association Name="BookingContact">
     <End Type="Model1.Booking" Role="Booking" Multiplicity="*" />
@@ -80,30 +78,15 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
-    <Property Name="CoffeeWanted" Nullable="false" Type="Boolean" />
-    <Property Name="TeaWanted" Nullable="false" Type="Boolean" />
-    <Property Name="NumberOfDiningGuests" Nullable="false" Type="Int16" />
+    <Property Name="NumberOfDiningGuests" Nullable="false" Type="Int32" />
     <Property Name="DishWishServedAt" Nullable="false" Type="DateTime" />
     <Property Name="DepartmentCharged" Nullable="false" Type="String" />
     <Property Name="DepartmentCreditNumber" Nullable="false" Type="String" />
     <Property Name="TotalPrice" Nullable="false" Type="Decimal" />
-    <NavigationProperty Name="Contact" Relationship="Model1.ContactMealOrder" FromRole="MealOrder" ToRole="Contact" />
-    <Property Name="ContactId" Nullable="false" Type="Int32" />
     <NavigationProperty Name="Booking" Relationship="Model1.BookingMealOrder" FromRole="MealOrder" ToRole="Booking" />
     <NavigationProperty Name="Refreshments" Relationship="Model1.MealOrdersRefreshments" FromRole="MealOrders" ToRole="Refreshments" />
+    <NavigationProperty Name="Contact" Relationship="Model1.MealOrderContact" FromRole="MealOrder" ToRole="Contact" />
   </EntityType>
-  <Association Name="ContactMealOrder">
-    <End Type="Model1.Contact" Multiplicity="1" Role="Contact" />
-    <End Type="Model1.MealOrder" Multiplicity="*" Role="MealOrder" />
-    <ReferentialConstraint>
-      <Principal Role="Contact">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="MealOrder">
-        <PropertyRef Name="ContactId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="BookingMealOrder">
     <End Type="Model1.Booking" Multiplicity="1" Role="Booking" />
     <End Type="Model1.MealOrder" Multiplicity="0..1" Role="MealOrder" />
@@ -123,20 +106,8 @@
     <Property Type="Boolean" Name="PhoneAvailable" Nullable="false" />
     <Property Type="Boolean" Name="WhiteboardAvailable" Nullable="false" />
     <Property Type="Boolean" Name="VideoconferenceAvailable" Nullable="false" />
-    <NavigationProperty Name="Booking" Relationship="Model1.RoomBooking" FromRole="Room" ToRole="Booking" />
+    <NavigationProperty Name="Booking" Relationship="Model1.BookingRoom" FromRole="Room" ToRole="Booking" />
   </EntityType>
-  <Association Name="RoomBooking">
-    <End Type="Model1.Room" Role="Room" Multiplicity="1" />
-    <End Type="Model1.Booking" Role="Booking" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Room">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="Booking">
-        <PropertyRef Name="RoomId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <EntityType Name="Product">
     <Key>
       <PropertyRef Name="Id" />
@@ -146,6 +117,7 @@
     <Property Type="String" Name="Description" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Type="Decimal" Name="Price" Nullable="false" />
     <Property Type="String" Name="Size" Nullable="false" />
+    <Property Type="Int32" Name="Quantity" Nullable="false" />
   </EntityType>
   <EntityType Name="RefreshmentItem">
     <Key>
@@ -172,5 +144,13 @@
   <Association Name="RefreshmentItemProduct">
     <End Type="Model1.RefreshmentItem" Role="RefreshmentItem" Multiplicity="0..1" />
     <End Type="Model1.Product" Role="Product" Multiplicity="1" />
+  </Association>
+  <Association Name="BookingRoom">
+    <End Type="Model1.Booking" Role="Booking" Multiplicity="*" />
+    <End Type="Model1.Room" Role="Room" Multiplicity="1" />
+  </Association>
+  <Association Name="MealOrderContact">
+    <End Type="Model1.MealOrder" Role="MealOrder" Multiplicity="*" />
+    <End Type="Model1.Contact" Role="Contact" Multiplicity="1" />
   </Association>
 </Schema>

@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, and Azure
 -- --------------------------------------------------
--- Date Created: 12/06/2011 22:53:27
+-- Date Created: 12/12/2011 19:33:25
 -- Generated from EDMX file: D:\Develope\Projects\TeliaCore\TeliaCore\TeliaCore\Models\TeliaCore.edmx
 -- --------------------------------------------------
 
@@ -23,20 +23,20 @@ GO
 IF OBJECT_ID(N'[dbo].[FK_BookingContact_Contact]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[BookingContact] DROP CONSTRAINT [FK_BookingContact_Contact];
 GO
-IF OBJECT_ID(N'[dbo].[FK_ContactMealOrder]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[MealOrders] DROP CONSTRAINT [FK_ContactMealOrder];
-GO
 IF OBJECT_ID(N'[dbo].[FK_BookingMealOrder]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[MealOrders] DROP CONSTRAINT [FK_BookingMealOrder];
-GO
-IF OBJECT_ID(N'[dbo].[FK_RoomBooking]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[Bookings] DROP CONSTRAINT [FK_RoomBooking];
 GO
 IF OBJECT_ID(N'[dbo].[FK_MealOrdersRefreshments]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[RefreshmentItems] DROP CONSTRAINT [FK_MealOrdersRefreshments];
 GO
 IF OBJECT_ID(N'[dbo].[FK_RefreshmentItemProduct]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[RefreshmentItems] DROP CONSTRAINT [FK_RefreshmentItemProduct];
+GO
+IF OBJECT_ID(N'[dbo].[FK_BookingRoom]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Bookings] DROP CONSTRAINT [FK_BookingRoom];
+GO
+IF OBJECT_ID(N'[dbo].[FK_MealOrderContact]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[MealOrders] DROP CONSTRAINT [FK_MealOrderContact];
 GO
 
 -- --------------------------------------------------
@@ -79,8 +79,7 @@ CREATE TABLE [dbo].[Bookings] (
     [StartTime] datetime  NOT NULL,
     [EndTime] datetime  NOT NULL,
     [Host] nvarchar(max)  NOT NULL,
-    [RoomId] int  NOT NULL,
-    [MealOrderWanted] bit  NOT NULL
+    [Room_Id] int  NOT NULL
 );
 GO
 
@@ -106,15 +105,13 @@ GO
 -- Creating table 'MealOrders'
 CREATE TABLE [dbo].[MealOrders] (
     [Id] int IDENTITY(1,1) NOT NULL,
-    [CoffeeWanted] bit  NOT NULL,
-    [TeaWanted] bit  NOT NULL,
-    [NumberOfDiningGuests] smallint  NOT NULL,
+    [NumberOfDiningGuests] int  NOT NULL,
     [DishWishServedAt] datetime  NOT NULL,
     [DepartmentCharged] nvarchar(max)  NOT NULL,
     [DepartmentCreditNumber] nvarchar(max)  NOT NULL,
     [TotalPrice] decimal(18,0)  NOT NULL,
-    [ContactId] int  NOT NULL,
-    [Booking_Id] int  NOT NULL
+    [Booking_Id] int  NOT NULL,
+    [Contact_Id] int  NOT NULL
 );
 GO
 
@@ -140,7 +137,8 @@ CREATE TABLE [dbo].[Products] (
     [Name] nvarchar(max)  NOT NULL,
     [Description] nvarchar(max)  NOT NULL,
     [Price] decimal(18,0)  NOT NULL,
-    [Size] nvarchar(max)  NOT NULL
+    [Size] nvarchar(max)  NOT NULL,
+    [Quantity] int  NOT NULL
 );
 GO
 
@@ -156,7 +154,7 @@ GO
 -- Creating table 'BookingContact'
 CREATE TABLE [dbo].[BookingContact] (
     [Booking_Id] int  NOT NULL,
-    [Contact_Id] int  NOT NULL
+    [Contacts_Id] int  NOT NULL
 );
 GO
 
@@ -200,10 +198,10 @@ ADD CONSTRAINT [PK_RefreshmentItems]
     PRIMARY KEY CLUSTERED ([Id] ASC);
 GO
 
--- Creating primary key on [Booking_Id], [Contact_Id] in table 'BookingContact'
+-- Creating primary key on [Booking_Id], [Contacts_Id] in table 'BookingContact'
 ALTER TABLE [dbo].[BookingContact]
 ADD CONSTRAINT [PK_BookingContact]
-    PRIMARY KEY NONCLUSTERED ([Booking_Id], [Contact_Id] ASC);
+    PRIMARY KEY NONCLUSTERED ([Booking_Id], [Contacts_Id] ASC);
 GO
 
 -- --------------------------------------------------
@@ -219,10 +217,10 @@ ADD CONSTRAINT [FK_BookingContact_Booking]
     ON DELETE NO ACTION ON UPDATE NO ACTION;
 GO
 
--- Creating foreign key on [Contact_Id] in table 'BookingContact'
+-- Creating foreign key on [Contacts_Id] in table 'BookingContact'
 ALTER TABLE [dbo].[BookingContact]
 ADD CONSTRAINT [FK_BookingContact_Contact]
-    FOREIGN KEY ([Contact_Id])
+    FOREIGN KEY ([Contacts_Id])
     REFERENCES [dbo].[Contacts]
         ([Id])
     ON DELETE NO ACTION ON UPDATE NO ACTION;
@@ -230,21 +228,7 @@ ADD CONSTRAINT [FK_BookingContact_Contact]
 -- Creating non-clustered index for FOREIGN KEY 'FK_BookingContact_Contact'
 CREATE INDEX [IX_FK_BookingContact_Contact]
 ON [dbo].[BookingContact]
-    ([Contact_Id]);
-GO
-
--- Creating foreign key on [ContactId] in table 'MealOrders'
-ALTER TABLE [dbo].[MealOrders]
-ADD CONSTRAINT [FK_ContactMealOrder]
-    FOREIGN KEY ([ContactId])
-    REFERENCES [dbo].[Contacts]
-        ([Id])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
-
--- Creating non-clustered index for FOREIGN KEY 'FK_ContactMealOrder'
-CREATE INDEX [IX_FK_ContactMealOrder]
-ON [dbo].[MealOrders]
-    ([ContactId]);
+    ([Contacts_Id]);
 GO
 
 -- Creating foreign key on [Booking_Id] in table 'MealOrders'
@@ -259,20 +243,6 @@ ADD CONSTRAINT [FK_BookingMealOrder]
 CREATE INDEX [IX_FK_BookingMealOrder]
 ON [dbo].[MealOrders]
     ([Booking_Id]);
-GO
-
--- Creating foreign key on [RoomId] in table 'Bookings'
-ALTER TABLE [dbo].[Bookings]
-ADD CONSTRAINT [FK_RoomBooking]
-    FOREIGN KEY ([RoomId])
-    REFERENCES [dbo].[Rooms]
-        ([Id])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
-
--- Creating non-clustered index for FOREIGN KEY 'FK_RoomBooking'
-CREATE INDEX [IX_FK_RoomBooking]
-ON [dbo].[Bookings]
-    ([RoomId]);
 GO
 
 -- Creating foreign key on [MealOrdersId] in table 'RefreshmentItems'
@@ -301,6 +271,34 @@ ADD CONSTRAINT [FK_RefreshmentItemProduct]
 CREATE INDEX [IX_FK_RefreshmentItemProduct]
 ON [dbo].[RefreshmentItems]
     ([Product_Id]);
+GO
+
+-- Creating foreign key on [Room_Id] in table 'Bookings'
+ALTER TABLE [dbo].[Bookings]
+ADD CONSTRAINT [FK_BookingRoom]
+    FOREIGN KEY ([Room_Id])
+    REFERENCES [dbo].[Rooms]
+        ([Id])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_BookingRoom'
+CREATE INDEX [IX_FK_BookingRoom]
+ON [dbo].[Bookings]
+    ([Room_Id]);
+GO
+
+-- Creating foreign key on [Contact_Id] in table 'MealOrders'
+ALTER TABLE [dbo].[MealOrders]
+ADD CONSTRAINT [FK_MealOrderContact]
+    FOREIGN KEY ([Contact_Id])
+    REFERENCES [dbo].[Contacts]
+        ([Id])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_MealOrderContact'
+CREATE INDEX [IX_FK_MealOrderContact]
+ON [dbo].[MealOrders]
+    ([Contact_Id]);
 GO
 
 -- --------------------------------------------------

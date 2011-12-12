@@ -1,4 +1,4 @@
-﻿@model TeliaCore.Models.Booking
+﻿@model TeliaCore.Models.BookingExt
 @using TeliaCore.HtmlHelpers
 @using TeliaCore.Models
 
@@ -184,22 +184,108 @@
 
          <div class="wizard-step" id="contacts">
             <h3>Step 2: Vælg kontakter</h3>
-         <table>
-               
-                @foreach(var contact in ((IList<Contact>)ViewData["AllContacts"]))
-                {
-                    <tr>
-                        <td>
-                            @contact.FirstName
-                        </td>
-                        <td>@contact.LastName</td>
-                        <td>
-                        <input type="checkbox" id="@(contact.Id)tsas" name="ContactIds" value="@contact.Id"/>
-                        </td>
-                    </tr>
-                }
+         @*<table>*@
+               <input type="search" class="contactSearch" id="search" onkeyup="SearchContacts();return false;"/>
+               <table>
+	                <tbody>
+                        <tr>
+		                    <td>
+			                    <select multiple="multiple" size="10" name="sel1">
+			                   @foreach(var contact in ((IList<Contact>)ViewData["AllContacts"]))
+                                {
+                                    <option class="allcontacts" id="@(contact.Id)tsas" name="ContactIds" value="@contact.Id">@contact.FirstName @contact.LastName - @contact.Department</option>
+                                }
+			                    </select>
+		                    </td>
+		                    <td align="center" valign="middle">
+			                    <input class="move_forward" type="button" onclick="moveOptions(this.form.sel1, this.form.sel2);" value="&gt;"/><br/>
+			                    <input class="move_backward" type="button" onclick="moveOptions(this.form.sel2, this.form.sel1);" value="&lt;"/>
+		                    </td>
+		                    <td>
+			                    <select class="invited" multiple="multiple" size="10" name="sel2">
+			               
+			                    </select>
+		                    </td>
+	                    </tr>
+                    </tbody>
                 </table>
-
+
+                <script type="text/javascript">
+
+                    $('#search').keyup(function (event) {
+                        var search_text = $('#search').val();
+                        var rg = new RegExp(search_text, "i");
+                        $('.allcontacts').each(function() {
+                            if ($.trim($(this).html()).search(rg) == -1) {
+                                $(this).parent().css('display', 'none');
+                                $(this).css('display', 'none');
+                                $(this).next().css('display', 'none');
+                                $(this).next().next().css('display', 'none');
+                            }
+                            else {
+                                $(this).parent().css('display', '');
+                                $(this).css('display', '');
+                                $(this).next().css('display', '');
+                                $(this).next().next().css('display', '');
+                            }
+                        });
+                    });
+
+//                    $('#search_clear').click(function () {
+//                        $('#search').val('');
+
+//                        $('..allcontacts').each(function () {
+//                            $(this).parent().css('display', '');
+//                            $(this).css('display', '');
+//                            $(this).next().css('display', '');
+//                            $(this).next().next().css('display', '');
+//                        });
+//                    });
+
+     
+                        function addOption(theSel, theText, theValue) {
+                            var newOpt = new Option(theText, theValue);
+                            var selLength = theSel.length;
+                            theSel.options[selLength] = newOpt;
+                        }
+
+                        function deleteOption(theSel, theIndex) {
+                            var selLength = theSel.length;
+                            if (selLength > 0) {
+                                theSel.options[theIndex] = null;
+                            }
+                        }
+
+                        function moveOptions(theSelFrom, theSelTo) {
+
+                            var selLength = theSelFrom.length;
+                            var selectedText = new Array();
+                            var selectedValues = new Array();
+                            var selectedCount = 0;
+
+                            var i;
+
+                            // Find the selected Options in reverse order
+                            // and delete them from the 'from' Select.
+                            for (i = selLength - 1; i >= 0; i--) {
+                                if (theSelFrom.options[i].selected) {
+                                    selectedText[selectedCount] = theSelFrom.options[i].text;
+                                    selectedValues[selectedCount] = theSelFrom.options[i].value;
+                                    deleteOption(theSelFrom, i);
+                                    selectedCount++;
+                                }
+                            }
+
+                            // Add the selected text/values in reverse order.
+                            // This will add the Options to the 'to' Select
+                            // in the same order as they were in the 'from' Select.
+                            for (i = selectedCount - 1; i >= 0; i--) {
+                                addOption(theSelTo, selectedText[i], selectedValues[i]);
+                            }
+
+                         }
+
+                </script>
          </div>
         
          <div class="wizard-step" id="room">

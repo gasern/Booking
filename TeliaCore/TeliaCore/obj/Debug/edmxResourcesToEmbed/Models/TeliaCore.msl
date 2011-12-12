@@ -12,8 +12,6 @@
           <ScalarProperty Name="StartTime" ColumnName="StartTime" />
           <ScalarProperty Name="EndTime" ColumnName="EndTime" />
           <ScalarProperty Name="Host" ColumnName="Host" />
-          <ScalarProperty Name="RoomId" ColumnName="RoomId" />
-          <ScalarProperty Name="MealOrderWanted" ColumnName="MealOrderWanted" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -41,14 +39,11 @@
       <EntityTypeMapping TypeName="IsTypeOf(Model1.MealOrder)">
         <MappingFragment StoreEntitySet="MealOrders">
           <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="CoffeeWanted" ColumnName="CoffeeWanted" />
-          <ScalarProperty Name="TeaWanted" ColumnName="TeaWanted" />
           <ScalarProperty Name="NumberOfDiningGuests" ColumnName="NumberOfDiningGuests" />
           <ScalarProperty Name="DishWishServedAt" ColumnName="DishWishServedAt" />
           <ScalarProperty Name="DepartmentCharged" ColumnName="DepartmentCharged" />
           <ScalarProperty Name="DepartmentCreditNumber" ColumnName="DepartmentCreditNumber" />
           <ScalarProperty Name="TotalPrice" ColumnName="TotalPrice" />
-          <ScalarProperty Name="ContactId" ColumnName="ContactId" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -77,6 +72,7 @@
           <ScalarProperty Name="Description" ColumnName="Description" />
           <ScalarProperty Name="Price" ColumnName="Price" />
           <ScalarProperty Name="Size" ColumnName="Size" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -94,7 +90,7 @@
         <ScalarProperty Name="Id" ColumnName="Booking_Id" />
       </EndProperty>
       <EndProperty Name="Contact">
-        <ScalarProperty Name="Id" ColumnName="Contact_Id" />
+        <ScalarProperty Name="Id" ColumnName="Contacts_Id" />
       </EndProperty>
     </AssociationSetMapping>
     <AssociationSetMapping Name="BookingMealOrder" TypeName="Model1.BookingMealOrder" StoreEntitySet="MealOrders">
@@ -110,6 +106,22 @@
         <ScalarProperty Name="Id" ColumnName="Product_Id" />
       </EndProperty>
       <EndProperty Name="RefreshmentItem">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="BookingRoom" TypeName="Model1.BookingRoom" StoreEntitySet="Bookings">
+      <EndProperty Name="Room">
+        <ScalarProperty Name="Id" ColumnName="Room_Id" />
+      </EndProperty>
+      <EndProperty Name="Booking">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="MealOrderContact" TypeName="Model1.MealOrderContact" StoreEntitySet="MealOrders">
+      <EndProperty Name="Contact">
+        <ScalarProperty Name="Id" ColumnName="Contact_Id" />
+      </EndProperty>
+      <EndProperty Name="MealOrder">
         <ScalarProperty Name="Id" ColumnName="Id" />
       </EndProperty>
     </AssociationSetMapping>
